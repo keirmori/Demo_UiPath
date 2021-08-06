@@ -1,0 +1,146 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="567.333333333333,1673.33333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mg="clr-namespace:Microsoft.Graph;assembly=Microsoft.Graph.Beta" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uma="clr-namespace:UiPath.MicrosoftTeams.Activities;assembly=UiPath.MicrosoftTeams.Activities" xmlns:umat="clr-namespace:UiPath.MicrosoftTeams.Activities.Teams;assembly=UiPath.MicrosoftTeams.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.MicrosoftTeams.Enums</x:String>
+      <x:String>UiPath.MicrosoftTeams.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.MicrosoftTeams.Activities.Teams</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="56">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Beta</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftTeams</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftTeams.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="554.666666666667,1608.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Input" />
+      <Variable x:TypeArguments="x:String" Name="FolderSelect" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MessageBox ChosenButton="{x:Null}" Caption="Excel書込保管・Teams投稿" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="512.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Demoを開始します。&quot;]" />
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="入力ダイアログ" sap:VirtualizedContainerService.HintSize="512.666666666667,244.666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="文字を入力してください。" Title="Excel書込保管・Teams投稿（文字入力）">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[Input]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:SelectFolder DisplayName="フォルダーを選択" sap:VirtualizedContainerService.HintSize="512.666666666667,22" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[FolderSelect]" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel アプリケーション スコープ" sap:VirtualizedContainerService.HintSize="512.666666666667,441.333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[FolderSelect &amp; &quot;HelloWorld.xlsx&quot;]">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="418,332.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="376,178.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelWriteCell Cell="A1" DisplayName="セルに書き込み" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Sheet1" Text="[Input]" />
+            </Sequence>
+            <ui:ExcelSaveWorkbook DisplayName="ブックを保存" sap:VirtualizedContainerService.HintSize="376,22" sap2010:WorkflowViewState.IdRef="ExcelSaveWorkbook_1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:CommentOut DisplayName="コメント アウト" sap:VirtualizedContainerService.HintSize="512.666666666667,491.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="無視されたアクティビティ" sap:VirtualizedContainerService.HintSize="476,412.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uma:Office365TeamsApplicationScopeV2 ApplicationId="{x:Null}" ContinueOnError="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Tenant="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" AuthenticationType="InteractiveToken" DisplayName="Microsoft Teams Scope" sap:VirtualizedContainerService.HintSize="434,320.666666666667" sap2010:WorkflowViewState.IdRef="Office365TeamsApplicationScopeV2_1" OAuthApplication="UiPath" Services="Teams">
+            <uma:Office365TeamsApplicationScopeV2.Body>
+              <ActivityAction x:TypeArguments="mg:GraphServiceClient">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="mg:GraphServiceClient" Name="MicrosoftTeamsScopeActivity" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,234.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <umat:SendMessage Body="{x:Null}" ChannelId="{x:Null}" ChatId="{x:Null}" MessageId="{x:Null}" Subject="{x:Null}" TeamId="{x:Null}" BodyType="Text" DisplayName="Send Message" sap:VirtualizedContainerService.HintSize="334,142.666666666667" sap2010:WorkflowViewState.IdRef="SendMessage_1" Importance="Normal" />
+                </Sequence>
+              </ActivityAction>
+            </uma:Office365TeamsApplicationScopeV2.Body>
+          </uma:Office365TeamsApplicationScopeV2>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:MessageBox ChosenButton="{x:Null}" Caption="ワクワクDemo" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="512.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Demoを終了いたします。&quot;]" />
+  </Sequence>
+</Activity>
